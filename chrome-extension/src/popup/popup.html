@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Movie Tracker</title>
+    <link rel="stylesheet" href="popup.bundle.css">
+</head>
+<body>
+    <div class="header">
+        <h2>🎬 Movie Tracker</h2>
+    </div>
+    
+    <div id="status" class="status not-detected">
+        Checking current page...
+    </div>
+    
+    <div id="movieInfo" class="movie-info" style="display: none;">
+        <div class="movie-title" id="movieTitle"></div>
+        <div class="movie-details" id="movieDetails"></div>
+    </div>
+
+    <div id="movie-tracker-widget-container" style="display: none;">
+        <div class="widget-main">
+            <div class="widget-badge">!</div>
+            <div class="widget-icon">🎬</div>
+            <div class="widget-options">
+                <div class="widget-header">
+                    <h3 id="widgetMovieTitle">Movie Detected!</h3> <button class="widget-close" aria-label="Close widget">×</button>
+                </div>
+                <div class="widget-buttons">
+                    <button class="widget-btn widget-btn-auto" data-action="auto">
+                        <span class="btn-icon">🔄</span>
+                        Auto-track this site
+                    </button>
+                    <button class="widget-btn widget-btn-single" data-action="single">
+                        <span class="btn-icon">📽️</span>
+                        Track this movie only
+                    </button>
+                </div>
+                <div class="widget-info">
+                    <small>Help us improve by letting us track streaming services</small>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <button id="testButton" class="test-button">Test Current Page</button>
+    
+    <div style="margin-top: 20px;">
+        <strong>Debug Log:</strong>
+        <div id="log" class="log"></div>
+    </div>
+    
+    <script src="popup.bundle.js"></script>
+</body>
+</html>

@@ -1,0 +1,178 @@
+body {
+    width: 300px;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.status {
+    padding: 10px;
+    border-radius: 6px;
+    margin: 10px 0;
+    font-size: 15px;
+}
+
+.detected {
+    background: #e8f5e8;
+    border: 1px solid #4CAF50;
+    color: #2e7d32;
+}
+
+.not-detected {
+    background: #fff3e0;
+    border: 1px solid #ff9800;
+    color: #f57c00;
+}
+
+.movie-info {
+    background: #f5f5f5;
+    padding: 12px;
+    border-radius: 6px;
+    margin: 10px 0;
+}
+
+.movie-title {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.movie-details {
+    font-size: 12px;
+    color: #666;
+}
+
+.test-button {
+    background: #2196F3;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+    margin: 10px 0;
+}
+
+.test-button:hover {
+    background: #1976D2;
+}
+
+.log {
+    max-height: 200px;
+    overflow-y: auto;
+    background: #f8f9fa;
+    padding: 10px;
+    border-radius: 4px;
+    font-family: monospace;
+    font-size: 11px;
+    white-space: pre-wrap;
+}
+
+/* Styles for the new widget */
+#movie-tracker-widget-container {
+    display: none; /* Initially hidden, controlled by JS */
+}
+
+.widget-main {
+    position: relative;
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 15px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.widget-badge {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background: #ff4500;
+    color: white;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.widget-icon {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.widget-options {
+    margin-top: 15px;
+    text-align: left;
+}
+
+.widget-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.widget-header h3 {
+    margin: 0;
+    color: #333;
+}
+
+.widget-close {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #666;
+    padding: 0; /* Remove default button padding */
+}
+
+.widget-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.widget-btn {
+    background: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%; /* Make buttons full width */
+    box-sizing: border-box; /* Include padding in width calculation */
+}
+
+.widget-btn-auto {
+    background: #2196F3; /* Blue for auto-track */
+}
+
+.widget-btn-single {
+    background: #FFC107; /* Amber for single track */
+    color: #333;
+}
+
+.widget-btn:hover {
+    opacity: 0.9;
+}
+
+.widget-info {
+    font-size: 11px;
+    color: #999;
+    text-align: center;
+}

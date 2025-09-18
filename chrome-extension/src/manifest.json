@@ -1,0 +1,58 @@
+{
+  "manifest_version": 3,
+  "name": "Movie Tracker",
+  "version": "1.0.0",
+  "description": "Automatically track movie watching progress across streaming platforms",
+
+  "permissions": [
+    "activeTab",
+    "storage",
+    "scripting",
+    "tabs",
+    "contextMenus"
+  ],
+
+  "host_permissions": [
+    "https://*/*",
+    "http://*/*"
+  ],
+
+  "background": {
+    "service_worker": "background/service-worker.js",
+    "type": "module"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["https://*/*", "http://*/*"],
+      "js": ["content.bundle.js"],
+      "css": ["content.bundle.css"],
+      "run_at": "document_idle"
+    } 
+  ],
+
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "public/assets/icons/icon16.png",
+      "48": "public/assets/icons/icon48.png",
+      "128": "public/assets/icons/icon128.png"
+    }
+  },
+
+  "icons": {
+    "16": "public/assets/icons/icon16.png",
+    "48": "public/assets/icons/icon48.png",
+    "128": "public/assets/icons/icon128.png"
+  },
+
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "public/assets/icons/*",
+        "popup.bundle.js"
+      ],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
